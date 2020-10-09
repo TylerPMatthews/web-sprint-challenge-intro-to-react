@@ -30,6 +30,9 @@ const StyledCharacter = styled.div`
   h1 {
     color: red;
   }
+  span{
+      color:green;
+  }
 `;
 
 export default function Character(data) {
@@ -37,7 +40,7 @@ export default function Character(data) {
     <StyledCharacter className="App">
         <img src={data.character.image} />
       <h1>Name: {data.character.name}</h1>
-      <p>Status: {data.character.status}</p>
+      <p><span>Status:</span> {data.character.status}</p>
       <p>Species: {data.character.species}</p>
       <p>Gender: {data.character.gender}</p>
       <p>Created: {data.character.created}</p>
