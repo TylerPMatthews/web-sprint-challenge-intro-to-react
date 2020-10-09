@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Axios from "axios";
 import  Character  from "./components/Character.js";
+import styled from 'styled-components';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -13,7 +14,7 @@ const App = () => {
   const [charactersData, setCharactersData] = useState([]);
   // const data = useState([])
   useEffect(() => {
-    Axios.get("http://swapi.dev/api/people/")
+    Axios.get("https://rickandmortyapi.com/api/character/")
       .then((res) => {
         setCharactersData(res.data.results);
       })
